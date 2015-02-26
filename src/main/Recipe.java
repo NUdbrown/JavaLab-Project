@@ -1,39 +1,19 @@
 package main;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.Serializable;
 
-/**
- * Servlet implementation class Recipe
- */
-@WebServlet("/Recipe")
-public class Recipe extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Recipe() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+public class Recipe implements Serializable{
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	public int ingredientsID;
+	public String recipeDescription;
+	public String recipeName;
+	public Ingredients ingredients;
+
+	public Recipe()
+	{
+		ingredientsID = -1;
+		recipeDescription = "";
+		recipeName = "";
+		ingredients = null;
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
 }

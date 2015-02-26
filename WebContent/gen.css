@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+
+body {
+    background-color: #FEF4DB;
+}
+header{
+    position: relative;
+    height: 200px;
+}
+    header h1{
+        text-align: center;
+        margin: 0px;
+        position: relative;
+        bottom: 130px;
+        left: 50px;
+        color: #306E12;
+        font-family: 'Niconne', cursive; 
+        font-size: 45px;
+    }
+nav{
+	font-size: 24px;
+    position: relative;
+    
+    
+}
+    nav li{
+        list-style: none;
+       
+    }
+    nav a{
+        background-color: #D4A16A;
+        text-decoration: none;
+        color: #FFFCF3;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 10px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 8px;
+    }
+    nav a:hover{
+        background-color: #804C15;
+    }
