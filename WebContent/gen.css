@@ -1,43 +1,126 @@
-@import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Ledger);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
 
-body {
-    background-color: #FEF4DB;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-header{
+
+#ingred{
+    padding-top: 10px;
     position: relative;
-    height: 200px;
+    top: 20px;
+    left: 20px;
+    width: 50%;
+
+
+
 }
-    header h1{
+    #ingred section{
+        color: #552C00;
+        padding: 12px;
+        width: 200px;
+        border: 4px ridge #FFD6AA;
+        font-family: 'Ledger', serif;
+        
+    }
+    #ingred  section legend{
+        font-size: 20px;
         text-align: center;
-        margin: 0px;
-        position: relative;
-        bottom: 130px;
-        left: 50px;
-        color: #306E12;
-        font-family: 'Niconne', cursive; 
-        font-size: 45px;
+        margin-left: auto;
+        margin-right: auto;
+
     }
-nav{
-	font-size: 24px;
+    #ingred  section legend p{
+        font-size: 15px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #ingred section form #fillIn{
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
+
+    #ingred section form #sub{
+        color: #552C00;
+        background-color: tan;
+        font-family: 'Ledger', serif;
+        font-weight: 600;
+    }
+    #ingred img{
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+    }
+#wel{
+    width: 55%;
     position: relative;
-    
+    bottom: 350px;
+    left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     
 }
-    nav li{
-        list-style: none;
-       
+    #wel section{
+        text-align: justify;
+        -webkit-column-count: 2;
+        -moz-column-count: 2; 
+        column-count: 2;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        padding: 45px;
     }
-    nav a{
-        background-color: #D4A16A;
-        text-decoration: none;
-        color: #FFFCF3;
-        float: left;
-        height: 45px;
-        line-height: 45px;
-        padding: 0 10px;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 8px;
+    #wel section p{
+        font-family: 'Ledger', serif;
+        color: #552C00;
     }
-    nav a:hover{
-        background-color: #804C15;
+    #wel h2{
+        font-family: 'Dancing Script', cursive;
+        font-size: 50px;
+        padding: 10px;
+        color: #AA7339;
+        text-shadow: 2px 5px #FFD6AA;
     }
+#rand{
+    margin-left: auto;
+    margin-right: auto; 
+    position: relative;
+    bottom: 250px;
+    width: 75%;
+
+}
+    #rand section{
+        display: inline-block;
+        -webkit-column-count: 2;
+        -moz-column-count: 2; 
+        column-count: 2;
+        -webkit-column-gap: 50px;
+        -moz-column-gap: 50px;
+        column-gap: 50px;
+    }
+.searchItem
+{
+	width: 400px;
+	border: 1px solid black;
+}

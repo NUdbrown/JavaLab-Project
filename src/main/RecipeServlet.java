@@ -67,12 +67,14 @@ public class RecipeServlet extends HttpServlet {
             {
             	JsonObject c = jArray.get(i).getAsJsonObject();
             	//System.out.println(c.get("name").toString() + ", " + c.get("url").toString() + ", " + c.get("ingredients").toString());
-            	add += "<div>";
+            	add += "<div class=\"searchItem\">";
             	add += "<img src=" + c.get("image").toString() + "/> ";
             	add += "<br/>";
+            	add += "<p>";
             	add += c.get("name").toString();
             	add += "<br/>";
             	add += c.get("ingredients").toString();
+            	add += "</p>";
             	add += "</div>";
             	/*
             	writer.append("<img src=" + c.get("image").toString() + "/> ");

@@ -6,12 +6,13 @@
 
 <link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/gen.css">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon.ico">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/consistent.css">
+<link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/icons/favicon.ico">
 <title>Empty Fridge</title>
 </head>
 <body>
     <header>
-        <img src="/icons/android-icon-192x192.png">
+        <img src="${pageContext.request.contextPath}/icons/android-icon-192x192.png">
         <h1>Welcome to Empty Fridge!</h1>
     </header>
 	<nav>
