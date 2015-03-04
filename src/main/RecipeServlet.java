@@ -41,10 +41,10 @@ public class RecipeServlet extends HttpServlet {
 		{
 			System.out.println("home");
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/EmptyFridge.jsp");
 			rd.forward(request, response);
 		}
-		else if(request.getRequestURI().endsWith("/Home/search"))
+		else if(request.getRequestURI().endsWith("/Home/Search"))
 		{
 			System.out.println("searching");
 		URL api = new URL("http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-any=pork");
@@ -66,16 +66,37 @@ public class RecipeServlet extends HttpServlet {
             for(int i=0; i<jArray.size(); i++)
             {
             	JsonObject c = jArray.get(i).getAsJsonObject();
+            	
+            	if(i%3 == 0)
+            	{
             	//System.out.println(c.get("name").toString() + ", " + c.get("url").toString() + ", " + c.get("ingredients").toString());
-            	add += "<div class=\"searchItem\">";
-            	add += "<img src=" + c.get("image").toString() + "/> ";
-            	add += "<br/>";
-            	add += "<p>";
-            	add += c.get("name").toString();
-            	add += "<br/>";
-            	add += c.get("ingredients").toString();
-            	add += "</p>";
-            	add += "</div>";
+            		if(i!=0)
+            		{
+            			add += "</div>";
+            		}
+            		add += "<div class=\"row\">";
+            		add += "<div class=\"col-xs-4 col-sm-4 col-md-4 searchItem\">";
+	            	add += "<img src=" + c.get("image").toString() + "/> ";
+	            	add += "<br/>";
+	            	add += "<p>";
+	            	add += c.get("name").toString();
+	            	add += "<br/>";
+	            	add += c.get("ingredients").toString();
+	            	add += "</p>";
+	            	add += "</div>";
+            	}
+            	else
+            	{
+            		add += "<div class=\"col-xs-4 col-sm-4 col-md-4 searchItem\">";
+	            	add += "<img src=" + c.get("image").toString() + "/> ";
+	            	add += "<br/>";
+	            	add += "<p>";
+	            	add += c.get("name").toString();
+	            	add += "<br/>";
+	            	add += c.get("ingredients").toString();
+	            	add += "</p>";
+	            	add += "</div>";
+            	}
             	/*
             	writer.append("<img src=" + c.get("image").toString() + "/> ");
             	writer.append("<br/>");

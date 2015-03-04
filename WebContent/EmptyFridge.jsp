@@ -16,10 +16,10 @@
 
         <nav>
             <ul>  
-                <li><a href="EmptyFridge.html">Home</a>
+                <li><a href="/Home">Home</a>
                 </li>
                 <li><a href="#">Preferences</a></li>
-                <li><a href="RecipeFinder.html">Recipe Finder</a></li>
+                <li><a href="/Home/Search">Recipe Finder</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">User Login</a></li>
             </ul>
