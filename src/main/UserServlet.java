@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class IngredientServlet
  */
 @WebServlet("/IngredientServlet")
-public class IngredientServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	private String fileLocation;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IngredientServlet(String fileLocation) {
+    public UserServlet(String fileLocation) {
         super();
         this.fileLocation = fileLocation;
     }

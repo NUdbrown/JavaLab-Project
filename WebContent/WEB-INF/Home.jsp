@@ -8,9 +8,9 @@
 
 <meta charset="UTF-8">
 
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/gen.css">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/consistent.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/bootstrap-3.3.2-dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/gen.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/consistent.css">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon.ico">
 <title>Empty Fridge Cooking</title>
 </head>

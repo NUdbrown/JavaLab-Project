@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
-<link rel="stylesheet" type="text/css" href="gen.css">
-<link rel="stylesheet" type="text/css" href="consistent.css">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon.ico">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/gen.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/consistent.css">
+<link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}icons/favicon.ico">
 <title>Empty Fridge Cooking</title>
 </head>
 <body>
@@ -18,10 +18,10 @@
             <ul>  
                 <li><a href="/Home">Home</a>
                 </li>
-                <li><a href="#">Preferences</a></li>
+                <li><a href="/Home/Preferences">Preferences</a></li>
                 <li><a href="/Home/Search">Recipe Finder</a></li>
-                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">User Login</a></li>
+                <li><a href="/Home/Contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>

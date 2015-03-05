@@ -5,31 +5,32 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/gen.css">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/consistent.css">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/Search_Archive.css" title="default">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/Search_Full.css" title="fullView">
-<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/Search_List.css" title="list">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/gen.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/consistent.css">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/Search_Archive.css" title="default">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/Search_Full.css" title="fullView">
+<link rel="stylesheet" type="text/css" Response.ContentType="text/css" href="${pageContext.request.contextPath}/css/Search_List.css" title="list">
 <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/icons/favicon.ico">
-<script Response.ContentType="text/js" src="${pageContext.request.contextPath}/styleSwitch.js"></script>
+<script Response.ContentType="text/js" src="${pageContext.request.contextPath}/js/styleSwitch.js"></script>
 <title>Empty Fridge</title>
 </head>
 <body>
     <header>
         <img src="${pageContext.request.contextPath}/icons/android-icon-192x192.png">
-        <h1>Welcome to Empty Fridge!</h1>
-    </header>
-	<nav>
+        <img id="secIMG" src="${pageContext.request.contextPath}/icons/android-icon-192x192.png">
+        <h1>College Life Presents:<br> The Empty Fridge</h1>
+    <nav>
 		<ul>  
 		  <li><a href="/Home">Home</a></li>
-		  <li><a href="EmptyFridge.html">Preferences</a></li>
-		  <li><a href="/Home/search">Recipe Finder</a></li>
-		  <li><a href="EmptyFridge.html">User Login</a></li>
-            <li><a href="EmptyFridge.html">Contact Us</a></li>
+		  <li><a href="/Home/Prefences">Preferences</a></li>
+		  <li><a href="/Home/Search">Recipe Finder</a></li>
+		  <li><a href="/Home/Login">User Login</a></li>
+            <li><a href="/Home/Contact">Contact Us</a></li>
 		</ul>
 		<br/>
 		<br/>
 	</nav>
+	</header>
 	<form>
 		<input type="submit" onclick="switch_style('default');return false;" name="theme" value="Archive View" id="archive">
 		<input type="submit" onclick="switch_style('fullView');return false;" name="theme" value="Full View" id="full">

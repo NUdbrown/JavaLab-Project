@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Ledger);
+
+
+article{
+    padding-bottom: 70px;
+}
+.photos{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    left: 20px;
+    width: 240px;
+}
+div{
+    width: 80%;
+    border: 5px;
+    border-style: groove;
+    border-color: #306E12;
+    margin-left: auto;
+    margin-right: auto;
+}
+#info{
+    position: relative;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .tg td{
+        font-family: 'Ledger', serif;
+        color: #552C00;
+        font-size:14px;
+        text-align: center;
+        padding:10px 10px;
+        border-style:solid;
+        border-width:0px;
+        overflow:hidden;
+        word-break:normal;
+    }
+    .tg th{
+         font-family: 'Ledger', serif;
+        color: #552C00;
+        font-size:14px;
+        font-weight:normal;
+        padding:10px 105px;
+        border-style:solid;
+        border-width:0px;
+        overflow:hidden;
+        word-break:normal;
+    }
+    .tg .tg-ls8f{
+        font-family: 'Ledger', serif;
+        color: #552C00;
+    }
+
