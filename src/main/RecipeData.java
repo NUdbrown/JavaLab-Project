@@ -27,7 +27,7 @@ public class RecipeData {
 	
 	public void SaveIDs(String fileLocation) throws IOException
 	{
-		FileOutputStream fos = new FileOutputStream(fileLocation+"/ids");
+		FileOutputStream fos = new FileOutputStream(fileLocation);
 		
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		
@@ -83,7 +83,7 @@ public class RecipeData {
 	
 	public void LoadIDs(String fileLocation) throws IOException, ClassNotFoundException
 	{
-		FileInputStream fis = new FileInputStream(fileLocation+"/ids");
+		FileInputStream fis = new FileInputStream(fileLocation);
 		
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		

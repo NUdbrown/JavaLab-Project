@@ -43,6 +43,7 @@ public class UserVerification {
 			}
 
 		}
+		
 	}
 	
 	public void SaveAllLogins(String fileLocation) throws IOException
@@ -106,7 +107,7 @@ public class UserVerification {
 	
 	public void SaveIDs(String fileLocation) throws IOException
 	{
-		FileOutputStream fos = new FileOutputStream(fileLocation+"/ids");
+		FileOutputStream fos = new FileOutputStream(fileLocation);
 		
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		
@@ -142,7 +143,7 @@ public class UserVerification {
 	}
 	public void LoadIDs(String fileLocation) throws ClassNotFoundException, IOException
 	{
-		FileInputStream fis = new FileInputStream(fileLocation+"/ids");
+		FileInputStream fis = new FileInputStream(fileLocation);
 		
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		
@@ -152,4 +153,5 @@ public class UserVerification {
 		fis.close();
 		ois.close();
 	}
+
 }

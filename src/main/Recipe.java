@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Recipe implements Serializable{
 
-	public int ingredientsID;
+	public long ingredientsID;
 	public String recipeDescription;
 	public String recipeName;
 	public Ingredients ingredients;

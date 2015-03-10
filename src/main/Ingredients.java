@@ -8,10 +8,10 @@ public class Ingredients implements Serializable {
 
 	
 	public HashMap<String, Long> ingredients;
-	private double id;
+	public long id;
 	
 	
-	public Ingredients(double id)
+	public Ingredients(long id)
 	{
 		ingredients = new HashMap<String, Long>();
 		this.id = id;
