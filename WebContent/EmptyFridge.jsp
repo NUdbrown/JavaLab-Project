@@ -27,12 +27,12 @@
     </header>
     <article id="ingred">
         <section>
-            <form method="get">
+            <form method="get" action="/Home/Search">
                 <legend>Whats in your fridge? 
                     <p>(separate items with a coma)</p>                       <br>
                 </legend>
                 Items: 
-                <input id="fillIn" type="text" name="usrname">
+                <input id="fillIn" type="text" name="ingred">
                 <input id="sub" type="submit">
             </form>
             <di>

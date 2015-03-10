@@ -47,8 +47,41 @@ public class RecipeServlet extends HttpServlet {
 		else if(request.getRequestURI().endsWith("/Search"))
 		{
 			System.out.println("searching");
-			URL api = new URL("http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-any=pork");
+			String ingred = request.getParameter("ingred");
+			if(ingred == null)
+			{
+				ingred = "";
+			}
+			//String ingredAll= request.getParameter("ingredAll");
+			String cuisine = request.getParameter("cuisine");
+			String methodCook = request.getParameter("methodCook");
+			
+			/*
+			if(ingredAll == null)
+			{
+				ingredAll = "";
+			}
+			*/
+			if(cuisine == null)
+			{
+				cuisine = "";
+			}
+			if(methodCook == null)
+			{
+				methodCook = "";
+			}
+			
+			String ing = ingred.replaceAll("\\s+", "");
+			//String ingAll = ingredAll.replaceAll("\\s+", "");
+			String cuis = cuisine.replaceAll("\\s+", "");
+			String methodC = methodCook.replaceAll("\\s+", "");
+			
+			System.out.println(ing);
+			
+			URL api = new URL("http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-any=" + ing + "&cuisine="+ cuis + "&method=" + methodC);
 			URLConnection yc = api.openConnection();
+			
+			System.out.println(api);
 			
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 	                yc.getInputStream()));
@@ -107,6 +140,7 @@ public class RecipeServlet extends HttpServlet {
 	            	*/
 	            }
 	        }
+	        
 	        in.close();
 	        
 	        request.setAttribute("recipe", add);
@@ -122,6 +156,11 @@ public class RecipeServlet extends HttpServlet {
 		else if(request.getRequestURI().endsWith("/Preferences"))
 		{
 			RequestDispatcher rd = request.getRequestDispatcher("/Preferences.jsp");
+			rd.forward(request, response);
+		}
+		else if(request.getRequestURI().endsWith("/Login"))
+		{
+			RequestDispatcher rd = request.getRequestDispatcher("/Registry.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith(".css"))

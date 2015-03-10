@@ -22,7 +22,7 @@
     <nav>
 		<ul>  
 		  <li><a href="/Home">Home</a></li>
-		  <li><a href="/Home/Prefences">Preferences</a></li>
+		  <li><a href="/Home/Preferences">Preferences</a></li>
 		  <li><a href="/Home/Search">Recipe Finder</a></li>
 		  <li><a href="/Home/Login">User Login</a></li>
             <li><a href="/Home/Contact">Contact Us</a></li>
@@ -31,6 +31,19 @@
 		<br/>
 	</nav>
 	</header>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<form method="get" action="/Home/Search">
+		<label for="ingred">Any Ingredients in a recipe&nbsp;</label><input type="text" name="ingred"><br/>
+		<label for="ingred">Cuisine of a recipe&nbsp;</label><input type="text" name="cuisine"><br/>
+		<label for="ingred">Cooking Method of a recipe&nbsp;</label><input type="text" name="methodCook"><br/>
+        <input id="sub" type="submit">
+	</form>
+	<br/>
+	<br/>
+	
 	<form>
 		<input type="submit" onclick="switch_style('default');return false;" name="theme" value="Archive View" id="archive">
 		<input type="submit" onclick="switch_style('fullView');return false;" name="theme" value="Full View" id="full">
