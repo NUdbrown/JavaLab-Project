@@ -20,7 +20,7 @@
                 </li>
                 <li><a href="/Home/Preferences">Preferences</a></li>
                 <li><a href="/Home/Search">Recipe Finder</a></li>
-                <li><a href="#">User Login</a></li>
+                <li><a href="/Home/Login">User Login</a></li>
                 <li><a href="/Home/Contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -33,7 +33,7 @@
                 </legend>
                 Items: 
                 <input id="fillIn" type="text" name="ingred">
-                <input id="sub" type="submit">
+                <input id="sub" type="submit" value="Sumbit">
             </form>
             <di>
                 <img src="images/healthy.jpg">
