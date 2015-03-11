@@ -21,10 +21,10 @@
         <nav>
             <ul>  
                 <li><a href="/Home">Home</a></li>
-                <li><a href="/Home/Preferences">Preferences</a></li>
+                <li><a href="/Preferences">Preferences</a></li>
                 <li><a href="/Search">Recipe Finder</a></li>
-                <li><a href="UserLogin.html">User Login</a></li>
-                <li><a href="/Home/Contact">Contact Us</a></li>
+                <li><a href="/Login">User Login</a></li>
+                <li><a href="/Contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -95,6 +95,6 @@
             </section>
     </article>
     
-    <footer>&copy;opyright, All rights reserved.<br>NU-Team 3</footer>
+    <footer>&copy;opyright, All rights reserved.<br/>NU-Team 3</footer>
 </body>
 </html>

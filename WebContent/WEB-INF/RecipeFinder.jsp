@@ -22,10 +22,10 @@
     <nav>
 		<ul>  
 		  <li><a href="/Home">Home</a></li>
-		  <li><a href="/Home/Preferences">Preferences</a></li>
-		  <li><a href="/Home/Search">Recipe Finder</a></li>
-		  <li><a href="/Home/Login">User Login</a></li>
-            <li><a href="/Home/Contact">Contact Us</a></li>
+		  <li><a href="/Preferences">Preferences</a></li>
+		  <li><a href="/Search">Recipe Finder</a></li>
+		  <li><a href="/Login">User Login</a></li>
+            <li><a href="/Contact">Contact Us</a></li>
 		</ul>
 		<br/>
 		<br/>
