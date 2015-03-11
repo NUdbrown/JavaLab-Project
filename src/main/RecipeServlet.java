@@ -182,7 +182,7 @@ public class RecipeServlet extends HttpServlet {
 				rd.forward(request, response);	
 			}
 			
-			UserLogin login = new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+			UserLogin login = new UserLogin(request.getParameter("username"), request.getParameter("password"));
 			
 			if(verification.userIDMap.containsKey(login))
 			{
@@ -219,9 +219,9 @@ public class RecipeServlet extends HttpServlet {
 				verification.LoadIDs(storageFileLocation+"/users/ids");
 				verification.LoadAllLogins(storageFileLocation+"/users");
 			
-				if(!verification.userIDMap.containsKey(new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"))))
+				if(!verification.userIDMap.containsKey(new UserLogin(request.getParameter("username"), request.getParameter("password"))))
 				{
-					verification.CreateNewLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+					verification.CreateNewLogin(request.getParameter("username"), request.getParameter("password"));
 				}
 				else
 				{
@@ -264,7 +264,7 @@ public class RecipeServlet extends HttpServlet {
 			}
 			
 			String[] ingredientsString = request.getParameter("ingredients").split(",");
-			UserLogin login = new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+			UserLogin login = new UserLogin(request.getParameter("username"), request.getParameter("password"));
 			Ingredients ingredients = new Ingredients(verification.FindID(login));
 			
 			for(String s : ingredientsString)
