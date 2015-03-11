@@ -184,17 +184,24 @@ public class RecipeServlet extends HttpServlet {
 			
 			UserLogin login = new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
 			
-			Ingredients ingredients = ingredientsData.ingredientsMap.get(verification.FindID(login));
-			
-			
-			
-			request.setAttribute("login", login);
-			request.setAttribute("ingredients", ingredients);
-			
-			
-			
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
-			rd.forward(request, response);
+			if(verification.userIDMap.containsKey(login))
+			{
+				// Successful Login
+				Ingredients ingredients = ingredientsData.ingredientsMap.get(verification.FindID(login));
+				
+				
+				request.setAttribute("login", login);
+				request.setAttribute("ingredients", ingredients);
+						
+				
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
+				rd.forward(request, response);
+				
+			}
+			else
+			{
+				// Invalid User and Password, redirect where?
+			}
 		}
 		
 	}
@@ -225,7 +232,9 @@ public class RecipeServlet extends HttpServlet {
 				verification.SaveAllLogins(storageFileLocation+"/users");
 				verification.SaveIDs(storageFileLocation+"/users/ids");
 				
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
+				
+				
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Registry");
 				rd.forward(request, response);
 				
 			} catch (Exception e) {
@@ -262,6 +271,7 @@ public class RecipeServlet extends HttpServlet {
 			{
 				ingredients.AddIngredient(s);
 			}
+			
 			ingredientsData.AddIngredients(verification.FindID(login), ingredients);
 		
 			
@@ -269,7 +279,8 @@ public class RecipeServlet extends HttpServlet {
 			ingredientsData.SaveIDs(storageFileLocation+"/ingredients/ids");
 			ingredientsData.SaveAllIngredients(storageFileLocation+"/ingredients");
 			
-			
+			request.setAttribute("login", login);
+			request.setAttribute("ingredients", ingredients);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
 			rd.forward(request, response);
