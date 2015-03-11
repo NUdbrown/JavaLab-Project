@@ -95,6 +95,6 @@
             </section>
     </article>
     
-    <footer>&copy;opyright, All rights reserved.<br>NU-Team 3</footer>
+    <footer>&copy;opyright, All rights reserved.<br/>NU-Team 3</footer>
 </body>
 </html>
