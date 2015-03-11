@@ -44,7 +44,7 @@ public class RecipeServlet extends HttpServlet {
 		{
 			System.out.println("home");
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/EmptyFridge.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/EmptyFridge.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith("/Search"))
@@ -148,22 +148,22 @@ public class RecipeServlet extends HttpServlet {
 	        
 	        request.setAttribute("recipe", add);
 	        System.out.println(add);
-	        RequestDispatcher rd = request.getRequestDispatcher("/RecipeFinder.jsp");
+	        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/RecipeFinder.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith("/Contact"))
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/Contact.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Contact.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith("/Preferences"))
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/Preferences.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Preferences.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith("/Login"))
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/Registry.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Registry.jsp");
 			rd.forward(request, response);
 		}
 		else if(request.getRequestURI().endsWith("/SuccessfulLogin"))
