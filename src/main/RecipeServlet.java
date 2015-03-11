@@ -30,6 +30,10 @@ public class RecipeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	
+	IngredientsData ingredientsData;
+	UserVerification verification;
+	String storageFileLocation;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
@@ -162,10 +166,44 @@ public class RecipeServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Registry.jsp");
 			rd.forward(request, response);
 		}
-		else if(request.getRequestURI().endsWith(".css"))
+		else if(request.getRequestURI().endsWith("/SuccessfulLogin"))
 		{
+			try {
+				ingredientsData.LoadIDs(storageFileLocation+"/ingredients/ids");
+				ingredientsData.LoadAllIngredients(storageFileLocation+"/ingredients");
+	        	verification.LoadIDs(storageFileLocation+"/users/ids");
+	        	verification.LoadAllLogins(storageFileLocation+"/users/");
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				response.setStatus(500);
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/500InternalServerError.jsp");
+				rd.forward(request, response);	
+			}
 			
+			UserLogin login = new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+			
+			if(verification.userIDMap.containsKey(login))
+			{
+				// Successful Login
+				Ingredients ingredients = ingredientsData.ingredientsMap.get(verification.FindID(login));
+				
+				
+				request.setAttribute("login", login);
+				request.setAttribute("ingredients", ingredients);
+						
+				
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
+				rd.forward(request, response);
+				
+			}
+			else
+			{
+				// Invalid User and Password, redirect where?
+			}
 		}
+		
 	}
 
 	/**
@@ -174,7 +212,79 @@ public class RecipeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
 	{
-		// TODO Auto-generated method stub
+		if(request.getRequestURI().endsWith("/Register"))
+		{
+
+			try {
+				verification.LoadIDs(storageFileLocation+"/users/ids");
+				verification.LoadAllLogins(storageFileLocation+"/users");
+			
+				if(!verification.userIDMap.containsKey(new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"))))
+				{
+					verification.CreateNewLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+				}
+				else
+				{
+					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UsernamePasswordComboTaken.jsp");
+					rd.forward(request, response);	
+				}
+				
+				verification.SaveAllLogins(storageFileLocation+"/users");
+				verification.SaveIDs(storageFileLocation+"/users/ids");
+				
+				
+				
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Registry");
+				rd.forward(request, response);
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				response.setStatus(500);
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/500InternalServerError.jsp");
+				rd.forward(request, response);	
+			}
+			
+			
+		}
+		else if(request.getRequestURI().endsWith("/SaveIngredients"))
+		{
+			try {
+				ingredientsData.LoadIDs(storageFileLocation+"/ingredients/ids");
+				ingredientsData.LoadAllIngredients(storageFileLocation+"/ingredients");
+	        	verification.LoadIDs(storageFileLocation+"/users/ids");
+	        	verification.LoadAllLogins(storageFileLocation+"/users/");
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				response.setStatus(500);
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/500InternalServerError.jsp");
+				rd.forward(request, response);	
+			}
+			
+			String[] ingredientsString = request.getParameter("ingredients").split(",");
+			UserLogin login = new UserLogin(request.getParameter("Email"), request.getParameter("SuperSecurePassword"));
+			Ingredients ingredients = new Ingredients(verification.FindID(login));
+			
+			for(String s : ingredientsString)
+			{
+				ingredients.AddIngredient(s);
+			}
+			
+			ingredientsData.AddIngredients(verification.FindID(login), ingredients);
+		
+			
+			
+			ingredientsData.SaveIDs(storageFileLocation+"/ingredients/ids");
+			ingredientsData.SaveAllIngredients(storageFileLocation+"/ingredients");
+			
+			request.setAttribute("login", login);
+			request.setAttribute("ingredients", ingredients);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
+			rd.forward(request, response);
+		}
 	}
 
 }
