@@ -39,7 +39,7 @@ public class CreateIngredientsServlet extends HttpServlet {
 			e.printStackTrace();
 		}
     }
-
+    
     
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
