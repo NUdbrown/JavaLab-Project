@@ -19,7 +19,7 @@
                 <li><a href="/Home">Home</a></li>
                 <li><a href="/Home/Preferences">Preferences</a></li>
                 <li><a href="/Home/Search">Recipe Finder</a></li>
-                <li><a href="UserLogin.html">User Login</a></li>
+                <li><a href="/Home/Login">User Login</a></li>
                 <li><a href="/Home/Contact">Contact Us</a></li>
             </ul>
         </nav>
