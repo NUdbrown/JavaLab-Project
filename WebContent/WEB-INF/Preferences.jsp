@@ -24,39 +24,74 @@
             </ul>
         </nav>
     </header>
-    <article id="forms">
+        <article id="forms">
         <section>
-            <h3>Method</h3>
+            <h2>Cuisine Types:</h2>
             <form method="post">
-                <input type="checkbox" name="Roast"><label>Roast</label>
-                <input type="checkbox" name="Baked">
-                <label>Baked</label>
-                <input type="checkbox" name="Boiled">
-                <label>Boiled</label>
-                <br>
-                <input type="submit" value="Save" #save>
-            </form>
-        </section>
-        <section>
-            <h3>Cuisine</h3>
-            <form>
-                <input type="checkbox" name="french">                             <label>French</label>
-                <input type="checkbox" name="italian">
-                <label>Italian</label>
+                <h3>A</h3>
+                <input type="checkbox" name="african">
+                <label>African</label>
                 <input type="checkbox" name="american">
                 <label>American</label>
-                <br>
                 <input type="checkbox" name="asian">
                 <label>Asiain</label>
+                <input type="checkbox" name="austrian">
+                <label>Austrian</label>
+                <br>
+                <h3>B</h3>
+                <input type="checkbox" name="british-isles">
+                <label>British Isles</label>
+                <br>
+                <h3>C</h3>
+                <input type="checkbox" name="caribbean">
+                <label>Caribbean</label>
                 <input type="checkbox" name="chinese">
                 <label>Chinese</label>
+                <br>
+                <h3>F</h3>
+                <input type="checkbox" name="french">
+                <label>French</label>
+                <br>
+                <h3>G</h3>
+                <input type="checkbox" name="german">
+                <label>German</label>
+                <input type="checkbox" name="greek">
+                <label>Greek</label>
+                <br>
+                <h3>I</h3>
+                <input type="checkbox" name="indian">
+                <label>Indian</label>
+                <input type="checkbox" name="italian">
+                <label>Italian</label>
+                <br>
+                <h3>L</h3>
+                <input type="checkbox" name="latin-american">
+                <label>Latin-American</label>
+                <br>
+                <h3>M</h3>
+                <input type="checkbox" name="mediterranean">
+                <label>Mediterranean</label>
                 <input type="checkbox" name="mexican">
                 <label>Mexican</label>
                 <br>
-                <input type="checkbox" name="latinAmerican">
-                <label>Latin-American</label>
-                <input type="checkbox" name="caribbean">
-                <label>Caribbean</label>
+                <input type="checkbox" name="middle-eastern">
+                <label>Middle Eastern</label>
+                <br>
+                <h3>R</h3>
+                <input type="checkbox" name="russian-eastern-european">
+                <label>Russian / Eastern European</label>
+                <br>
+                <h3>S</h3>
+                <input type="checkbox" name="scandinavian">
+                <label>Scandinavian</label>
+                <br>
+                <input type="checkbox" name="spanish-portuguese">
+                <label>Spanish / Portuguese</label>
+                <br>
+                <h3>V</h3>
+                <input type="checkbox" name="vietnamese">
+                <label>Vietnamese</label>
+                <br>
                 <br>
                 <input type="submit" value="Save">
             </form>
