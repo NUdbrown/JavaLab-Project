@@ -19,20 +19,19 @@
         <h1>College Life Presents:<br> The Empty Fridge</h1>
         <nav>
             <ul>  
-                <li><a href="EmptyFridge.html">Home</a>
-                </li>
-                <li><a href="Preferences.html">Preferences</a></li>
-                <li><a href="RecipeFinder.html">Recipe Finder</a></li>
-                <li><a href="Contact.html">Contact Us</a></li>
-                <li><a href="Registry.html">User Login</a></li>
+ 				<li><a href="/Home">Home</a></li>
+                <li><a href="/Home/Preferences">Preferences</a></li>
+                <li><a href="/Home/Search">Recipe Finder</a></li>
+                <li><a href="/Home/Login">User Login</a></li>
+                <li><a href="/Home/Contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <article>
+    <article id="main">
             <h1>Welcome User!</h1>
       <article id="ingred">
         <section>
-            <form method="post">
+            <form method="get" action="/Home/Search">
                 <legend>Whats in your fridge? 
                     <p>(separate items with a coma)</p><br>
                 </legend>
@@ -41,11 +40,10 @@
                 <input id="sub" type="submit">
             </form>
             <di>
-                <img src="${pageContext.request.contextPath}/images/healthy.jpg">
+                <img src="images/healthy.jpg">
             </di>
         </section>
-
-    </article>
+        </article>
     </article>
     <footer>&copy;opyright, All rights reserved.<br>NU-Team 3</footer>
 </body>   
