@@ -28,7 +28,7 @@
         </nav>
     </header>
     <article id="main">
-            <h1>Welcome User #4578!</h1>
+            <h1>Welcome Foodie!</h1>
       <article id="ingred">
         <section>
             <form method="get" action="/Home/Search">
