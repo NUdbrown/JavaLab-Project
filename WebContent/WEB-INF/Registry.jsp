@@ -40,7 +40,7 @@
                     	<br>
                     </div>
                         <div id="login" class="animate form">
-                            <form  action="EmptyFridge.html" autocomplete="on" method="post"> 
+                            <form  action="/Home/SuccessfulLogin" autocomplete="on" method="get"> 
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email </label>
@@ -65,7 +65,7 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="" autocomplete="on" method="post">
+                            <form  action="/Home/Register" autocomplete="on" method="post">
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>

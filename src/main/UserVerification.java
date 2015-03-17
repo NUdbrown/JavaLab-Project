@@ -121,7 +121,7 @@ public class UserVerification {
 	public void LoadAllLogins(String fileLocation) throws IOException, ClassNotFoundException
 	{
 		// get all ID's
-		LoadIDs(fileLocation);
+		LoadIDs(fileLocation+"/ids");
 				
 		FileInputStream fis;
 				

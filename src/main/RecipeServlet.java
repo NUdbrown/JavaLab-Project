@@ -30,9 +30,9 @@ public class RecipeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	
-	IngredientsData ingredientsData;
-	UserVerification verification;
-	String storageFileLocation;
+	IngredientsData ingredientsData = new IngredientsData();
+	UserVerification verification = new UserVerification();
+	String storageFileLocation = "C:/Users/Zach OSullivan/Desktop/Recipes";
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException 
@@ -81,7 +81,7 @@ public class RecipeServlet extends HttpServlet {
 			
 			System.out.println(ing);
 			
-			URL api = new URL("http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-any=" + ing + "&cuisine="+ cuis + "&method=" + methodC);
+			URL api = new URL("http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-any=" + ing + "&cuisine="+ cuis + "&method=" + methodC + "&limit=100");
 			URLConnection yc = api.openConnection();
 			
 			System.out.println(api);
@@ -194,7 +194,7 @@ public class RecipeServlet extends HttpServlet {
 				request.setAttribute("ingredients", ingredients);
 						
 				
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserPage");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/UserProfile.jsp");
 				rd.forward(request, response);
 				
 			}
